@@ -1,0 +1,131 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #4a90e2, #9ae3d3);
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 10px 20px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-left: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 600px;
+    background: #efecec;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 100px; /* to avoid overlap with the fixed header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* max-height: 300px; Adjust based on your preference */
+}
+
+.message-right, .message-left {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+    max-width: 70%;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.message-right {
+    background-color: #daf8e3;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message-left {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.send {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 700px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#send-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#msginp {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#msginp::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4a90e2;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #357ab8;
+}
